@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Number</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th>Payment</th>
+        <th>Credit</th>
+        <th>Due Date</th>
+        <th>Payment Date</th>
+        <th>Term</th>
+        <th>Vendor</th>
+    </tr>
+    <tr th:each="invoice : ${invoices}">
+        <td th:text="${invoice.getInvoiceId()}"></td>
+        <td th:text="${invoice.getInvoiceNumber()}"></td>
+        <td th:text="${invoice.getInvoiceDate()}"></td>
+        <td th:text="${invoice.getInvoiceTotal()}"></td>
+        <td th:text="${invoice.getPaymentTotal()}"></td>
+        <td th:text="${invoice.getCreditTotal()}"></td>
+        <td th:text="${invoice.getInvoiceDueDate()}"></td>
+        <td th:text="${invoice.getPaymentDate()}"></td>
+        <td th:text="${invoice.getTerm().getTermsDescription()}"></td>
+        <td th:text="${invoice.getVendor().getVendorName()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

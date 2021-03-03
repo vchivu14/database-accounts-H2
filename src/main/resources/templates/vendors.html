@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Default Term</th>
+        <th>Default Account</th>
+    </tr>
+    <tr th:each="vendor : ${vendors}">
+        <td th:text="${vendor.getVendorName()}"></td>
+        <td th:text="${vendor.getAddress1()}"></td>
+        <td th:text="${vendor.getVendorCity()}"></td>
+        <td th:text="${vendor.getVendorPhone()}"></td>
+        <td th:text="${vendor.getVendorContactFirstName()}"></td>
+        <td th:text="${vendor.getVendorContactLastName()}"></td>
+        <td th:text="${vendor.getTerm().getTermsDescription()}"></td>
+        <td th:text="${vendor.getAccount().getAccountNumber()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
