@@ -1,4 +1,4 @@
-# database-accounts-H
+# database-accounts-H2
 
 <h3>This is an exercise web app for KEA Copenhagen, Computer Science</h3>
 
